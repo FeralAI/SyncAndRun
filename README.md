@@ -4,7 +4,7 @@ A simple .NET Core console application to synchronize a folder prior to launchin
 
 ## Installation
 
-Download the package for your OS and extract the contents into the folder you would like to keep in sync. You can install to a separate folder, but this application is designed to live in the target sync path.
+Requires .NET Core 3.1 to be installed. Download the package for your OS and extract the contents into the folder you would like to keep in sync. You can install to a separate folder, but this application is designed to live in the target sync path.
 
 ## Configuration
 
