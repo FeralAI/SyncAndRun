@@ -14,15 +14,10 @@ namespace SyncAndRun
 
 		static void Main(string[] args)
 		{
-			// Configure
 			Configure(args);
 			Logger.LogInformation($"Starting SyncAndRun for {Settings.ProgramName}");
-
-			// Check if key file was updated
 			SyncFiles();
-
-			// Launch ES
-			RunEmulationStation();
+			RunProgram();
 		}
 
 		private static void Configure(string[] args)
@@ -50,8 +45,8 @@ namespace SyncAndRun
 
 			var dirs = dir.GetDirectories();
 			
-			// If the destination directory doesn't exist, create it.       
-			Directory.CreateDirectory(destDirName);        
+			// If the destination directory doesn't exist, create it.
+			Directory.CreateDirectory(destDirName);
 
 			// Get the files in the directory and copy them to the new location.
 			var files = dir.GetFiles();
@@ -79,7 +74,7 @@ namespace SyncAndRun
 			}
 		}
 
-		private static void RunEmulationStation()
+		private static void RunProgram()
 		{
 			Logger.LogInformation($"Launching {Settings.ProgramName}");
 			var es = new Process();
